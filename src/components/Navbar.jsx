@@ -72,8 +72,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
-      <div className="flex items-center justify-between w-full max-w-5xl px-6 py-3 rounded-full glass shadow-lg">
+    <div className="fixed top-3 left-0 w-full z-50 flex justify-center px-2 sm:px-4">
+      <div className="flex items-center justify-between w-full max-w-5xl px-3 sm:px-6 py-2 rounded-full glass">
         <div className="cursor-pointer group">
           <div className="relative w-10 h-10 rounded-full">
             <div className="absolute inset-0 rounded-full bg-cyan-400/30 blur-md opacity-0 group-hover:opacity-100 transition duration-300"></div>
@@ -203,7 +203,7 @@ const Navbar = () => {
         </div>
 
         {/* ================= MOBILE NAV ================= */}
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex md:hidden items-center gap-2">
           <button
             onClick={() => scrollTo("home")}
             className={`${navItemStyle} ${

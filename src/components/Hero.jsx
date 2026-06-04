@@ -44,14 +44,19 @@ export default function Hero() {
   // 👉 Messenger config
   const username = process.env.NEXT_PUBLIC_FACEBOOK_USERNAME;
 
-  const messengerURL = `https://m.me/${username}`;
+  const message =
+    "Hello Atikur, I visited your portfolio and want to connect with you.";
+
+  const messengerURL = `https://www.facebook.com/messages/t/${username}?text=${encodeURIComponent(
+    message,
+  )}`;
 
   return (
     <section
       id="home"
       className="min-h-screen bg-[#0B0F1A] text-white flex items-center justify-center px-4 sm:px-6 lg:px-12 py-5"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* LEFT SIDE */}
         <div className="text-center md:text-left">
           <p className="text-gray-400 mb-2 text-sm sm:text-base">Hey, I'm</p>
@@ -114,11 +119,11 @@ export default function Hero() {
             />
 
             <div className="absolute top-2 -right-20 glass px-4 py-2 rounded-lg text-sm z-20 whitespace-nowrap">
-              Frontend Developer
+              Full Stack Developer
             </div>
 
             <div className="absolute bottom-4 -left-20 glass px-4 py-2 rounded-lg text-sm z-20 whitespace-nowrap">
-              UI/UX Focused Developer
+              Available for Freelance
             </div>
           </div>
         </div>
