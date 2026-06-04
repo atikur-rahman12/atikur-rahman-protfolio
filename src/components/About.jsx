@@ -69,14 +69,14 @@ export default function AboutSection() {
           </p>
 
           <motion.a
-            href="/resume.pdf" // 👉 এখানে তোমার resume link দিবা
+            href="https://drive.google.com/file/d/1JcMPspWv4RVMPVO9QHnvr2HxklerTpii/view?usp=sharing" 
             target="_blank"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block"
           >
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-400 to-pink-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
+              <div className="absolute -inset-0.5 bg-linear-to-r from-orange-400 to-pink-500 rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
 
               <button className="relative px-8 py-3 bg-[#111827] rounded-xl text-white font-semibold border border-gray-700 backdrop-blur-md">
                 📄 Download Resume

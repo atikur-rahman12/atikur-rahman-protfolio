@@ -4,19 +4,26 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import KeenKeeper from "@/assets/keenkeeper.png";
-import ProtFolio from "@/assets/protfolio.png";
+import HireLoop from "@/assets/hireloop.png";
 import DigiTools from "@/assets/DigiTools.png";
 import IssuesTracker from "@/assets/issues.png";
 import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "My ProtFolio",
-    tags: ["Next JS", "JavaScript", "Tailwind CSS"],
+    title: "HireLoop – Job Hunting Portal",
+    tags: [
+      "Next JS",
+      "Node JS",
+      "JavaScript",
+      "MongoDB",
+      "Tailwind CSS",
+      "Stripe",
+    ],
     description:
-      "This portfolio showcases my journey as a Frontend Developer. Here you will find my selected projects, technical skills, and continuous learning progress with technologies like React, JavaScript, and Tailwind CSS. Each project represents my effort to turn ideas into real, functional web solutions.",
-    image: ProtFolio,
-    github: "#",
+      "HireLoop is a full-featured job hunting platform that connects job seekers and recruiters in a seamless ecosystem. It includes role-based dashboards (Seeker, Recruiter, Admin), job posting and application tracking, company management, subscription plans, and analytics. The project is currently in active development and focuses on building a scalable and modern hiring solution.",
+    image: HireLoop,
+    github: "https://github.com/atikur-rahman12/hireloop-client",
     live: "#",
   },
   {
@@ -142,14 +149,23 @@ export default function Projects() {
                     View Github
                   </a>
 
-                  <a
-                    href={project.live}
-                    className="inline-flex items-center gap-2 text-white border-b border-[#35556f] hover:border-[#ff6b57] pb-1 text-sm sm:text-base transition-all duration-300 relative group"
-                  >
-                    View project
-                    <ExternalLink size={16} />
-                    <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-[#ff6b57] transition-all duration-300 group-hover:w-full"></span>
-                  </a>
+                  {project.live && project.live !== "#" ? (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-white border-b border-[#35556f] hover:border-[#ff6b57] pb-1 text-sm sm:text-base transition-all duration-300 relative group"
+                    >
+                      View project
+                      <ExternalLink size={16} />
+                      <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-[#ff6b57] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-red-400 border-b border-red-400 pb-1 text-sm sm:text-base opacity-80 cursor-not-allowed">
+                      Project In Development | Coming Soon
+                      <ExternalLink size={16} />
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
