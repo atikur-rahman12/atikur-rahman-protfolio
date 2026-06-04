@@ -86,7 +86,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ================= DESKTOP NAV ================= */}
         <div className="hidden md:flex items-center gap-4 bg-black/30 px-5 py-2 rounded-full">
           <button
             onClick={() => scrollTo("home")}
@@ -202,7 +201,6 @@ const Navbar = () => {
           </Dropdown>
         </div>
 
-        {/* ================= MOBILE NAV ================= */}
         <div className="flex md:hidden items-center gap-1 flex-wrap">
           <button
             onClick={() => scrollTo("home")}
