@@ -6,10 +6,10 @@ import Image from "next/image";
 import { ArrowDown, MessageCircle } from "lucide-react";
 
 const roles = [
-  "Web Developer",
-  "Frontend Developer",
-  "React Developer",
-  "UI Designer",
+  "Web Developer..",
+  "Full Stack Developer..",
+  "React & Next Developer..",
+  "UI Designer..",
 ];
 
 export default function Hero() {
@@ -41,12 +41,18 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [subIndex, index, deleting]);
 
+  // 👉 Messenger config
+  const username = process.env.NEXT_PUBLIC_FACEBOOK_USERNAME;
+
+  const messengerURL = `https://m.me/${username}`;
+
   return (
     <section
       id="home"
       className="min-h-screen bg-[#0B0F1A] text-white flex items-center justify-center px-4 sm:px-6 lg:px-12 py-5"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-7xl">
+        {/* LEFT SIDE */}
         <div className="text-center md:text-left">
           <p className="text-gray-400 mb-2 text-sm sm:text-base">Hey, I'm</p>
 
@@ -63,17 +69,24 @@ export default function Hero() {
           </h2>
 
           <p className="mt-4 text-gray-400 text-sm sm:text-base">
-            🚀 Turning ideas into interactive web experiences <br /> ✨ Building
-            fast, modern & scalable applications <br /> 💻 Available for
-            freelance projects & collaborations
+            🚀 Turning ideas into interactive web experiences <br />
+            ✨ Building fast, modern & scalable applications <br />
+            💻 Available for freelance projects & collaborations
           </p>
 
-          <button className="mt-6 group relative inline-flex items-center gap-2 px-6 py-3 text-sm sm:text-base font-medium text-white bg-linear-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40">
+          {/* 👉 Messenger Button */}
+          <a
+            href={messengerURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 group relative inline-flex items-center gap-2 px-6 py-3 text-sm sm:text-base font-medium text-white bg-linear-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40"
+          >
             <MessageCircle className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
-            Say Hello
+            Message Me
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></span>
-          </button>
+          </a>
 
+          {/* Scroll */}
           <div className="mt-5 flex justify-center md:justify-start">
             <div className="scroll-down flex items-center gap-2 cursor-pointer">
               <div className="mouse">
@@ -83,13 +96,13 @@ export default function Hero() {
               <span className="text-gray-400 text-xs tracking-widest">
                 SCROLL DOWN
               </span>
-              <div>
-                <ArrowDown />
-              </div>
+
+              <ArrowDown />
             </div>
           </div>
         </div>
 
+        {/* RIGHT SIDE */}
         <div className="flex justify-center">
           <div className="relative w-fit">
             <div className="absolute inset-0 rounded-full border-4 border-blue-500 animate-spin-slow blur-md"></div>

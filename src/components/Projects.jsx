@@ -5,8 +5,9 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import KeenKeeper from "@/assets/keenkeeper.png";
 import HireLoop from "@/assets/hireloop.png";
+import DocAppoint from "@/assets/docappoint.png";
 import DigiTools from "@/assets/DigiTools.png";
-import IssuesTracker from "@/assets/issues.png";
+// import IssuesTracker from "@/assets/issues.png";
 import { FaGithub } from "react-icons/fa";
 
 const projects = [
@@ -27,13 +28,22 @@ const projects = [
     live: "#",
   },
   {
+    title: "DocAppoint – Doctor Appointment Manager",
+    tags: ["Next JS", "Node JS", "MongoDB", "Tailwind CSS", "JWT Auth"],
+    description:
+      "DocAppoint is a full-stack doctor appointment booking system where users can browse doctors, view detailed profiles, and book appointments through a secure authentication system. It includes role-based features for users to manage bookings, update profiles, and handle appointment history. The system is built with a modern UI, responsive design, and focuses on seamless healthcare booking experience.",
+    image: DocAppoint,
+    github: "https://github.com/atikur-rahman12/doctor-appointment-manager",
+    live: "https://doctor-appointment-manager.vercel.app",
+  },
+  {
     title: "KeenKeeper",
     tags: ["HTML", "Tailwind CSS", "JavaScript", "React JS", "API"],
     description:
       "KeenKeeper is a thoughtful personal relationship management platform designed to help you keep your most meaningful friendships close and nurtured.It acts as your personal shelf of important connections — allowing you to easily browse, track, and maintain the relationships that matter most in your life. With intelligent insights and gentle reminders, KeenKeeper helps you stay consistent in nurturing your friendships without letting them fade away.",
     image: KeenKeeper,
     github: "https://github.com/atikur-rahman12/my-7th-assignment",
-    live: "https://my-7th-assignment-teal.vercel.app/",
+    live: "https://keen-keeper-eight-delta.vercel.app",
   },
   {
     title: "DigiTools",
@@ -42,16 +52,7 @@ const projects = [
       "DigiTools is a modern all-in-one digital platform that provides premium AI-powered tools, design assets, templates, and productivity software in a single place. Designed to supercharge your digital workflow, DigiTools helps freelancers, designers, marketers, and creators work faster and more efficiently. With a sleek, dark-themed interface and intuitive user experience, users can easily explore and access high-quality AI tools and resources to boost their productivity and creativity.",
     image: DigiTools,
     github: "https://github.com/atikur-rahman12/my-6th-assignment",
-    live: "https://my-6th-assignment.vercel.app/",
-  },
-  {
-    title: "GitHub Issues Tracker",
-    tags: ["HTML", "Tailwind CSS", "JavaScript", "API"],
-    description:
-      "GitHub Issues Tracker is a clean and modern web app for tracking and managing project issues. It features issue cards with priority levels, labels (Bug, Enhancement, Documentation), status filtering (Open/Closed), and search functionality — providing an intuitive way to organize and monitor development tasks.",
-    image: IssuesTracker,
-    github: "https://github.com/atikur-rahman12/5th-assignment",
-    live: "https://github-issues-tracker-topaz.vercel.app/",
+    live: "https://digi-tools-beta.vercel.app",
   },
 ];
 

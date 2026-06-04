@@ -74,7 +74,7 @@ export default function Qualification() {
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
-          <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-white/10"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-8.5 h-full bg-white/10"></div>
 
           <div className="space-y-10">
             {qualifications.map((item, index) => (

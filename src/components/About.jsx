@@ -1,13 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MonitorSmartphone, Smartphone, ServerCog } from "lucide-react";
+import {
+  MonitorSmartphone,
+  ShieldCheck,
+  ServerCog,
+  Database,
+  Smartphone,
+} from "lucide-react";
 
 export default function AboutSection() {
   const services = [
     {
       id: 1,
-      title: "Frontend Development (React / Next.js)",
+      title: "Full-Stack Web Development",
       icon: <MonitorSmartphone size={32} />,
     },
     {
@@ -17,7 +23,17 @@ export default function AboutSection() {
     },
     {
       id: 3,
-      title: "Responsive UI / Tailwind CSS Design",
+      title: "Database Design & Management",
+      icon: <Database size={32} />,
+    },
+    {
+      id: 4,
+      title: "Authentication & Security",
+      icon: <ShieldCheck size={32} />,
+    },
+    {
+      id: 5,
+      title: "UI/UX & Responsive Design",
       icon: <Smartphone size={32} />,
     },
   ];
@@ -62,14 +78,21 @@ export default function AboutSection() {
           <h2 className="text-4xl md:text-6xl font-bold mb-8">About Me</h2>
 
           <p className="text-gray-300 leading-8 text-lg mb-12 max-w-xl">
-            I started my software journey from photography. Through that, I
-            learned to love the process of creating from scratch. Since then,
-            this has led me to software development as it fulfills my love for
-            learning and building things.
+            I started my journey in design and photography, where I developed a
+            strong eye for detail and creativity. Over time, my passion shifted
+            toward software development, where I found joy in building
+            real-world applications.
+            <br />
+            <br />
+            Currently, I work with React and Next.js to build modern frontend
+            interfaces, along with Node.js, Express, and databases for backend
+            systems. I also focus on authentication systems, API development,
+            and responsive UI design. My goal is to become a strong full-stack
+            developer who builds scalable and impactful web applications.
           </p>
 
           <motion.a
-            href="https://drive.google.com/file/d/1JcMPspWv4RVMPVO9QHnvr2HxklerTpii/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1JcMPspWv4RVMPVO9QHnvr2HxklerTpii/view?usp=sharing"
             target="_blank"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
