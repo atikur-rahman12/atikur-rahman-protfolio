@@ -92,7 +92,7 @@ export default function AboutSection() {
           </p>
 
           <motion.a
-            href="https://drive.google.com/file/d/1JcMPspWv4RVMPVO9QHnvr2HxklerTpii/view?usp=sharing"
+            href="https://drive.google.com/file/d/1iO-o7_FjL4SG50wteX8Xz2m_kUCbXT4C/view?usp=sharing"
             target="_blank"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
