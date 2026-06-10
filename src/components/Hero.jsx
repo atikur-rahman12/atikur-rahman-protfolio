@@ -41,13 +41,12 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [subIndex, index, deleting]);
 
-  // 👉 Messenger config
-  const username = process.env.NEXT_PUBLIC_FACEBOOK_USERNAME;
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
   const message =
     "Hello Atikur, I visited your portfolio and want to connect with you.";
 
-  const messengerURL = `https://www.facebook.com/messages/t/${username}?text=${encodeURIComponent(
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,
   )}`;
 
@@ -56,7 +55,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen bg-[#0B0F1A] text-white flex items-center justify-center px-4 sm:px-6 lg:px-12 py-5"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-7xl">
         {/* LEFT SIDE */}
         <div className="text-center md:text-left">
           <p className="text-gray-400 mb-2 text-sm sm:text-base">Hey, I'm</p>
@@ -79,15 +78,15 @@ export default function Hero() {
             💻 Available for freelance projects & collaborations
           </p>
 
-          {/* 👉 Messenger Button */}
+          {/* 👉 WhatsApp Button */}
           <a
-            href={messengerURL}
+            href={whatsappURL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 group relative inline-flex items-center gap-2 px-6 py-3 text-sm sm:text-base font-medium text-white bg-linear-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40"
           >
             <MessageCircle className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
-            Message Me
+            Say Hello
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></span>
           </a>
 
@@ -119,11 +118,11 @@ export default function Hero() {
             />
 
             <div className="absolute top-2 -right-20 glass px-4 py-2 rounded-lg text-sm z-20 whitespace-nowrap">
-              Full Stack Developer
+              Frontend Developer
             </div>
 
             <div className="absolute bottom-4 -left-20 glass px-4 py-2 rounded-lg text-sm z-20 whitespace-nowrap">
-              Available for Freelance
+              UI/UX Focused Developer
             </div>
           </div>
         </div>
