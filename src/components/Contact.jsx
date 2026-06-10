@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaEnvelope, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
   const form = useRef();
@@ -25,10 +26,14 @@ export default function ContactSection() {
         setStatus("success");
         setLoading(false);
         form.current.reset();
+
+        toast.success("Message sent successfully! 🚀");
       })
       .catch(() => {
         setStatus("error");
         setLoading(false);
+
+        toast.error("Failed to send message. Please try again.");
       });
   };
 

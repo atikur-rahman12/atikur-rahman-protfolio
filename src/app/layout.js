@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 import CursorGlow from "@/components/CursorGlow";
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <CursorGlow />
         {children}
+        <Toaster position="top-center" />
       </body>
     </html>
   );
